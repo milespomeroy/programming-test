@@ -1,0 +1,14 @@
+/* app css stylesheet */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.from {
+    font-style: italic;
+}
+
+.tweet {
+    padding-left: 15px;
+}

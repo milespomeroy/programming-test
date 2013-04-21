@@ -1,0 +1,20 @@
+<a href="#/lang">Language Test</a>
+<h2>Tweet Test</h2>
+
+<input type="text" placeholder="search" autofocus ng-model="query" ng-change="search()" />
+
+<p ng-hide="showResults">Type to search Twitter.</p>
+
+<div ng-show="showResults">
+    <h3>Searched for: {{searchedFor}}</h3>
+    <ul>
+        <li ng-repeat="tweet in tweets">
+          <p class="from">
+              {{tweet.from_user}}
+          </p>
+          <p class="tweet">
+              {{tweet.text}}
+          </p>
+        </li>
+    </ul>
+</div>
