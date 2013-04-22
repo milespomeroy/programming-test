@@ -13,10 +13,26 @@ function SearchCtrl($scope, $http) {
             });
         }
     }
+
+    $scope.getRaw = function() {
+        if ($scope.query.length > 2) {
+            $http.get('service/search?q=' + $scope.query, {headers: {'Accept': 'text/plain'}}).success(function(data) {
+                $scope.raw = data;
+            });
+        } else {
+            $scope.raw = "Oops, your search query is not long enough. Pow!";
+        }
+    }
 }
 
 function LangCtrl($scope, $http) {
     $http.get('service/languages').success(function(data) {
         $scope.languages = data;
     });
+
+    $scope.getRaw = function() {
+        $http.get('service/languages', {headers: {'Accept': 'text/plain'}}).success(function(data) {
+            $scope.raw = data;
+        });
+    }
 }

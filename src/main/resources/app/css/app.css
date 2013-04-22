@@ -12,3 +12,9 @@ ul {
 .tweet {
     padding-left: 15px;
 }
+
+pre {
+    border: 1px solid lightgray;
+    padding: 10px;
+    background: lightcyan;
+}

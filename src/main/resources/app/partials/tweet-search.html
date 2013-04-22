@@ -1,4 +1,5 @@
 <a href="#/lang">Language Test</a>
+
 <h2>Tweet Test</h2>
 
 <input type="text" placeholder="search" autofocus ng-model="query" ng-change="search()" />
@@ -7,6 +8,10 @@
 
 <div ng-show="showResults">
     <h3>Searched for: {{searchedFor}}</h3>
+
+    <button ng-click="getRaw()">See Raw</button>
+    <pre ng-show="raw"><code>{{raw}}</code></pre>
+
     <ul>
         <li ng-repeat="tweet in tweets">
           <p class="from">

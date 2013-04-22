@@ -1,6 +1,9 @@
 <a href="#/search">Tweet Test</a>
 <h2>Language Test</h2>
 
+<button ng-click="getRaw()">See Raw</button>
+<pre ng-show="raw"><code>{{raw}}</code></pre>
+
 <ul ng-repeat="lang in languages">
     <li>{{lang.language}}</li>
 </ul>
